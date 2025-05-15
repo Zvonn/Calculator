@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/display_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.3"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/display_background"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom|end"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/operation_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/secondary_text"
+                android:textSize="20sp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/result_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/primary_text"
+                android:textSize="48sp"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/button_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <GridLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="4"
+        android:rowCount="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_guideline">
+
+        <Button
+            android:id="@+id/button_clear"
+            style="@style/CalculatorFunctionButton"
+            android:text="AC" />
+
+        <Button
+            android:id="@+id/button_plus_minus"
+            style="@style/CalculatorFunctionButton"
+            android:text="±" />
+
+        <Button
+            android:id="@+id/button_percent"
+            style="@style/CalculatorFunctionButton"
+            android:text="%" />
+
+        <Button
+            android:id="@+id/button_divide"
+            style="@style/CalculatorOperationButton"
+            android:text="÷" />
+
+        <Button
+            android:id="@+id/button_7"
+            style="@style/CalculatorDigitButton"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/button_8"
+            style="@style/CalculatorDigitButton"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/button_9"
+            style="@style/CalculatorDigitButton"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/button_multiply"
+            style="@style/CalculatorOperationButton"
+            android:text="×" />
+
+        <Button
+            android:id="@+id/button_4"
+            style="@style/CalculatorDigitButton"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/button_5"
+            style="@style/CalculatorDigitButton"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/button_6"
+            style="@style/CalculatorDigitButton"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/button_subtract"
+            style="@style/CalculatorOperationButton"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/button_1"
+            style="@style/CalculatorDigitButton"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/button_2"
+            style="@style/CalculatorDigitButton"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button_3"
+            style="@style/CalculatorDigitButton"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/button_add"
+            style="@style/CalculatorOperationButton"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/button_0"
+            style="@style/CalculatorDigitButton"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/button_dot"
+            style="@style/CalculatorDigitButton"
+            android:text="." />
+
+        <Button
+            android:id="@+id/button_equal"
+            style="@style/CalculatorEqualButton"
+            android:text="=" />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

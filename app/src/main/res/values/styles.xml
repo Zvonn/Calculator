@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CalculatorButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="CalculatorDigitButton" parent="CalculatorButton">
+        <item name="android:textColor">@color/digit_button_text</item>
+        <item name="backgroundTint">@color/digit_button_background</item>
+    </style>
+
+    <style name="CalculatorFunctionButton" parent="CalculatorButton">
+        <item name="android:textColor">@color/function_button_text</item>
+        <item name="backgroundTint">@color/function_button_background</item>
+    </style>
+
+    <style name="CalculatorOperationButton" parent="CalculatorButton">
+        <item name="android:textColor">@color/operation_button_text</item>
+        <item name="backgroundTint">@color/operation_button_background</item>
+    </style>
+
+    <style name="CalculatorEqualButton" parent="CalculatorButton">
+        <item name="android:textColor">@color/equal_button_text</item>
+        <item name="backgroundTint">@color/equal_button_background</item>
+    </style>
+</resources>
